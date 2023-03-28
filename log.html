@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        input{
+            height: 50px;
+            width: 100%;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid rgb(126, 124, 124);
+            margin-top: 20px;
+            background-color:rgb(255, 254, 254);
+        }
+        #btn{
+            background-color: #000000;
+            color: white;
+            font-size:medium;
+            border-radius: 15px;
+            cursor:  pointer;
+        }
+        #btn:hover{
+            background-color: #161616;
+        }
+        input::placeholder{
+            font-size: medium;
+        }
+        p{
+            margin-top: 50px;
+            color: rgb(107, 105, 105);
+        }
+        @media screen and (max-width: 380px) {
+            input{
+                background-image: linear-gradient(90deg, rgb(252, 252, 252), rgba(255, 0, 98, 0.295));
+            }
+            #btn{
+                background-image: linear-gradient(90deg, rgb(0, 0, 0), rgba(0, 0, 0, 0.308));
+            }
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <input type="text" class="name" id="name" placeholder="Name" required ><br>
+        <input type="password" id="pswd" placeholder="Password" required ><br>
+        <input id="btn" type="submit" value="Sign in" onclick="err()">
+        <p>Frogotten your password on your login details?<br><a style="color: rgb(107, 105, 105);" href="#">Get help</a> signing in</p>
+    </form>
+
+    <script>
+        function err(){
+            //event.preventDefault();
+            var name = document.getElementById("name").value;
+            var pswd = document.getElementById("pswd").value;
+            if(name!="pathum"){
+                //alert("worl");
+                //location.reload();
+                //document.getElementsByClassName("name")[0].placeholder = "Wrong UserName";
+            }
+        }
+    </script>
+</body>
+</html>
+

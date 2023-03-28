@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        #-two{
+            background-image: linear-gradient(90deg, rgba(247, 247, 40, 0), #f8458a);
+        }
+        iframe{
+            width: 100%; 
+            height: 65%;
+        }
+    </style>
+</head>
+<body>
+    <div class="raw">
+        <div class="col -one" id="-one">
+            <div class="all">
+                <h3>exchange.com</h3>
+                <div class="column">
+                    <div id="Co1">
+                        <h2>Welcome Back</h2>
+                        <p style="color: rgb(107, 107, 107); ">Not registered yet? <a href="#"  style="text-decoration: none; color: black; font-weight:500;" onclick='chang1()'>Sign up</a> </p>
+                    </div>
+                    <div id="Co2" style="display: none;">
+                        <h2>Get Started</h2>
+                        <p style="color: rgb(107, 107, 107); ">Already registered? <a href="#"  style="text-decoration: none; color: black; font-weight:500;" onclick='chang2()'>Sign in</a> </p>
+                    </div>
+                </div>
+                
+                
+                <iframe frameborder="0" id="myframe" src="log.html" scrolling="No" style="  border: 1px solid rgba(255, 0, 0, 0); "></iframe>
+            </div>  
+        </div>
+
+        <div class="col -two" id="-two">
+            <div class="img" >
+                <img src="girl.png" style="width: 100%;" alt="">
+                <p style="text-align: center; font-weight: 300; font-size: 2vw; letter-spacing: 1px;">Customize as you like <br> <span style="font-family: cursive; font-weight: 800; letter-spacing: 0; ">exchange.com</span>  </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function chang1(){
+            document.getElementById("-one").style.animationName = "example1";
+            document.getElementById("-two").style.animationName = "example2";
+
+            var iframe = document.getElementById("myframe");
+            iframe.src ="reg.html";
+
+            document.getElementById("Co2").style.display = "block";
+            document.getElementById("Co1").style.display = "none";
+            document.getElementById("-two").style.backgroundImage = "linear-gradient(90deg, #f8458a, rgba(247, 247, 40, 0) )";
+        }
+
+        function chang2(){
+            document.getElementById("-one").style.animationName = "example11";
+            document.getElementById("-two").style.animationName = "example22";
+
+            var iframe = document.getElementById("myframe");
+            iframe.src ="log.html";
+
+            document.getElementById("Co2").style.display = "none";
+            document.getElementById("Co1").style.display = "block";
+            document.getElementById("-two").style.backgroundImage = "linear-gradient(90deg,  rgba(247, 247, 40, 0), #f8458a )";
+        }
+
+        
+    </script>
+</body>
+</html>
